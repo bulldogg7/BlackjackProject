@@ -12,6 +12,7 @@ public class Deck {
 		createDeck();
 	}
 
+	// Create a Deck
 	private void createDeck() {
 		for (Suit suit : Suit.values()) {
 			for (Rank rank : Rank.values()) {
@@ -21,14 +22,17 @@ public class Deck {
 		return;
 	}
 
+	// Check Quantity of Cards in the Deck
 	public int checkDeckSize() {
 		return cards.size();
 	}
 
+	// Shuffle the Cards in the Deck
 	public void shuffleDeck() {
 		Collections.shuffle(cards);
 	}
 
+	// Deal a Card from the Deck
 	public Card dealCard() {
 		return cards.remove(0);
 	}
