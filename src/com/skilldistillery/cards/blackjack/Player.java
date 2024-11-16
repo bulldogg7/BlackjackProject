@@ -7,25 +7,25 @@ public class Player {
 	Scanner input = new Scanner(System.in);
 
 	// Fields
-	protected BlackjackHand hand;
+	protected BlackjackHand cards = new BlackjackHand();
 
 	// No Argument Constructor
-	public Player() {
-		hand = new BlackjackHand();
+	public Player() { 
 	}
 
-	// NO getHand()
+	// NO getHand() From the Deck!!!
 
-	// Get Dealt a Card to Your Hand
-	public void hitMe(Card card) {
-		hand.addCard(card);
+	// Player Gets Card Dealt to Their Hand From Dealer
+	public void hitMe(Card dealtCard) {
+		cards.addCard(dealtCard);
 	}
 
-	public void addCard(Card dealCard) {
-		getHandOfCards().addCard(dealCard);
+	// Dealer Gets Card Dealt to Their Hand From Dealer
+	public void addCardToDealerHand(Card dealerCard) {
+		cards.addCard(dealerCard);
 	}
 
-	// Say Whether to Hit or Stand
+	// Player Says Whether to Hit or Stand
 	public void hitOrStand(Dealer dealer) {
 		boolean playingGame = true;
 		while (playingGame) {
@@ -46,15 +46,17 @@ public class Player {
 		}
 	}
 
-	// Empty Hand to 0 Cards
-
+	// Player Discards Hand to 0 Cards
+		public void clearHand() {
+			this.cards.clear();
+		}
+	
+	
 	// See Value of Cards in Hand
 	public int getHandValue() {
 		return getHandValue();
 
 	}
-
-
 
 	public void setHandOfCards(BlackjackHand handOfCards) {
 		this.hand = handOfCards;
@@ -62,7 +64,7 @@ public class Player {
 
 	@Override
 	public String toString() {
-		return "hand";
+		return getHand();
 	}
 
 }

@@ -25,16 +25,11 @@ public class Dealer extends Player {
 	public void hitOrStand () {
 		System.out.println();
 		while (getHandValue() < 17) {
-			
 		}
-		
 	}
-	
+		
 	// Shuffle the Deck???
 	public void shuffleDeck() {
 		deck.shuffleDeck();
 	}
-	
-	
-	
 }

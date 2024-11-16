@@ -8,7 +8,7 @@ public class Card {
     this.rank = rank;
     this.suit = suit;
   }
-  
+  								//DONE! DO NOT EDIT!
   @Override
   public int hashCode() {
     final int prime = 31;
