@@ -24,7 +24,7 @@ public class Dealer extends Player {
 	// Dealer Hit or Stand
 	public void hitOrStand () {
 		System.out.println();
-		while (getHandValue < 17) {
+		while (getHandValue() < 17) {
 			
 		}
 		

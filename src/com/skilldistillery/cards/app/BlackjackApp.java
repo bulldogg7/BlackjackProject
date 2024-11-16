@@ -21,49 +21,60 @@ public class BlackjackApp {
 	}
 
 	public static void main(String[] args) {
-		BlackjackApp app = new BlackjackApp();
-		app.playGame();
+		BlackjackApp game = new BlackjackApp();
+		game.launch();
 	}
 
 	// Start Playing the Game
-	public void playGame() {
+	private void launch() {
 		playingGame = true;
-		while (playingGame) {
+		System.out.println("Are You Ready to Play? Yes or No");
+		String playGame = input.nextLine();
+		if (playGame.equalsIgnoreCase("Y")) {
 			dealer.shuffleDeck();
 			dealCards();
+		}
+		else (playGame.equalsIgnoreCase("N")) {
+			System.out.println("See You Next Time!");
+}
+		playingGame = true;
+		while (playingGame) {
+			
 		}
 
 	}
 
 	// Deal Out Cards to Player & Dealer
 	private void dealCards() {
-		player.addCard;
-		dealer.addCard;
-		player.addCard;
-		dealer.addCard;
+		player.addCard(dealer.dealCard());
+		dealer.addCard(dealer.dealCard());
+		player.addCard(dealer.dealCard());
+		dealer.addCard(dealer.dealCard());
 		System.out.println("Your Hand Contains: ");
 		System.out.println("The Dealer's Hand Contains: ");
 	}
-
 	// Ask Player to Hit or Stand
-	System.out.println("Your Hand Totals: "+hand+". Do You Want to Hit or Stand? H or S");
-
+	void hitOrStand() {
 	}
-
+	
 	// Results of Blackjack, 21, or Player Loses/Dealer Wins
 
+	
 	// Empty Hand of the Player & Dealer (Turn Cards Back In)
 
 	// Ask to Play Again (Loop?)
-	System.out.println("Do You Want to Play Again? Y or N");
+//	System.out.println("Do You Want to Play Again? Y or N");
 	String playAgain = input.nextLine();
-	if(playAgain.equalsIgnoreCase("Y")) {
-		playingGame = true;
-		System.out.println("Here We Go!");
-	} else if(playAgain.equalsIgnoreCase("N")) {
-		playingGame = false;
-		System.out.println("See You Next Time!");
-	} else {
-		System.out.println("Invalid Input. Try Again.");
+	{
+		if (playAgain.equalsIgnoreCase("Y")) {
+			playingGame = true;
+			System.out.println("Here We Go!");
+		} else if (playAgain.equalsIgnoreCase("N")) {
+			playingGame = false;
+			System.out.println("See You Next Time!");
+			input.close();
+		} else {
+			System.out.println("Invalid Input. Try Again.");
+		}
 	}
-}}
+}
