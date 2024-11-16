@@ -18,6 +18,23 @@ public class Player {
 	public void hitMe(Card card) {
 		hand.addCard(card);
 	}
+
+	// Say Whether to Hit or Stay
+	
+	// Empty Hand to 0 Cards
+	
+	// See Value of Cards in Hand
+	
+	
+	
+	
+	
+	@Override
+	public String toString() {
+		return "hand";
+	}
+	
+	
 	
 	
 	

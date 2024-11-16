@@ -9,7 +9,8 @@ public enum Rank {
 	private Rank(int value) {
 		this.value = value;
 	}
-
+	
+	// Get Value of Card
 	public int getValue() {
 		return value;
 	}

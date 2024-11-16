@@ -11,7 +11,6 @@ public class Dealer extends Player {
 	// No Argument Constructor
 	public Dealer() {
 		deck = new Deck();
-		
 	}
 	
 	// NO getDeck()
@@ -22,7 +21,19 @@ public class Dealer extends Player {
 		return deck.dealCard();
 	}
 	
+	// Dealer Hit or Stand
+	public void hitOrStand () {
+		System.out.println();
+		while (getHandValue < 17) {
+			
+		}
+		
+	}
 	
+	// Shuffle the Deck???
+	public void shuffleDeck() {
+		deck.shuffleDeck();
+	}
 	
 	
 	
