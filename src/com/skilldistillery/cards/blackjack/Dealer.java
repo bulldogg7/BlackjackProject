@@ -23,7 +23,7 @@ public class Dealer extends Player {
 		while (getHandValue() < 17) {
 			hand.addCard(dealCard());
 			System.out.println();
-			System.out.println("The Dealer Hit & Drew a " + currentCardDealt());
+			System.out.println("The Dealer Hit. They Drew a " + currentCardDealt());
 			System.out.println("The Dealer's Hand Now Totals " + getHandValue());
 			System.out.println();
 		}

@@ -53,14 +53,14 @@ public class BlackjackApp {
 		dealer.hitMe(dealer.dealCard());
 		if (player.getHandValue() < 21) {
 			System.out.println("Your Cards Are: " + player.toString());
-			System.out.println("Your Cards Total: " + player.getHandValue());
+			System.out.println("Your Cards Total " + player.getHandValue());
 			System.out.println();
 			if (player.getHandValue() == 21) {
 				System.out.println("Blackjack! You Win!");
 				playAgain();
 			} else {
 				System.out.println("The Dealer's Cards Are: " + dealer.toString());
-				System.out.println("Their Cards Total: " + dealer.getHandValue());
+				System.out.println("Their Cards Total " + dealer.getHandValue());
 				System.out.println();
 			}
 		}
@@ -74,12 +74,12 @@ public class BlackjackApp {
 			String selection = input.nextLine();
 			if (selection.equalsIgnoreCase("H")) {
 				player.hitMe(dealer.dealCard());
-				System.out.println("You Were Dealt a: " + player.currentCardDealt());
-				System.out.println("Your Hand Now Totals: " + player.getHandValue());
+				System.out.println("You Were Dealt a " + player.currentCardDealt());
+				System.out.println("Your Hand Now Totals " + player.getHandValue());
 				System.out.println();
 			}
 			if (selection.equalsIgnoreCase("S")) {
-				System.out.println("Your Hand Totals: " + player.getHandValue());
+				System.out.println("Your Hand Totals " + player.getHandValue());
 				System.out.println();
 				stillPlaying = false;
 				dealer.dealerHitOrStay();
