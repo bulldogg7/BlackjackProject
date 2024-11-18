@@ -17,14 +17,14 @@ public abstract class AbstractHand {
 		cardsInHand.add(card);
 	}
 
-	// Return the Cards in Your Hand/Discard Hand
-	public void discardHand() {
-		cardsInHand.clear();
+	// Get Cards in Hand
+	public List<Card> getCardsInHand() {
+		return new ArrayList<>(cardsInHand);
 	}
-
+	
 	@Override
 	public String toString() {
-		return "Cards In Hand: " + cardsInHand;
+		return "" + cardsInHand;
 	}
 }
 			// DONE! DO NOT EDIT!

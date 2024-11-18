@@ -23,7 +23,12 @@
 
 ## Changes Made
 	- Refined User Experience with verbiage and formatting
-	- 
+	- Added a "Play Again" loop at the end
+	- Changed Dealer's "Hit or Stand" to the Dealer class
+	- Added a "discard hand" method to fix the card value accumulation error from
+	  the "Play Again" loop
+
+
 	 
 ## Difficulties Encountered
 	- The player class with different actions for both the player and the dealer
@@ -33,3 +38,9 @@
 	- I added, deleted, & added back several actions/methods as I tried to figure out
 	  who was doing what. I had several redundant methods & I tried re-naming several 
 	  things to better grasp what was actually happening.
+	- Ran into an issue with the dealer hit or stand & moved the dealer's decision
+	  into his class then called that method in the app
+	- Ran into an issue with cards accumulating over multiple games due to being added to
+	  the prior cards list of cards. Created a "discard hand" method & called it if the
+	  player wanted to play again
+

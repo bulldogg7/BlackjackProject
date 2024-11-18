@@ -15,11 +15,18 @@ public class BlackjackHand extends AbstractHand {
 		}
 		return handValue;
 	}
+	
+	// Display Hand
+	public void displayHand() {
+		for (Card card : cardsInHand) {
+			System.out.println(card);
+		}
+	}
 
 	// Hand Over 21 -> Bust
 	public boolean over21() {
 		if (getHandValue() > 21) {
-			System.out.println("Bust! You Lose!");
+			System.err.println("Bust! You Lose!");
 			return true;
 		} else {
 			return false;
@@ -29,11 +36,15 @@ public class BlackjackHand extends AbstractHand {
 	// Hand IS 21 -> Blackjack!
 	public boolean blackjack() {
 		if (getHandValue() == 21) {
-			System.out.println("Blackjack! You Win!");
+			System.out.println("Blackjack!");
 			return true;
 		} else {
 			return false;
 		}
+	}
+
+	public void clearHand() {
+		cardsInHand.clear();
 	}
 }
 				//DONE! DO NOT EDIT!
