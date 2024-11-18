@@ -31,9 +31,13 @@ public class BlackjackApp {
 			dealCards();
 			hitOrStand();
 		} else if (selection.equalsIgnoreCase("N") || (selection.equalsIgnoreCase("No"))) {
+			System.out.println();
 			System.out.println("See You Next Time!");
+			input.close();
 		} else {
 			System.err.println("Invalid Response!");
+			System.out.println();
+			launch();
 		}
 	}
 
@@ -66,30 +70,23 @@ public class BlackjackApp {
 	public void hitOrStand() {
 		boolean stillPlaying = true;
 		while (stillPlaying) {
-			if (player.getHandValue() == 21) {
-				System.out.println("Your Hand Totals " + player.getHandValue());
+			System.out.println("Your Hand Totals " + player.getHandValue() + ". Do You Want to Hit or Stand? H or S");
+			String selection = input.nextLine();
+			if (selection.equalsIgnoreCase("H")) {
+				player.hitMe(dealer.dealCard());
+				System.out.println("You Were Dealt a: " + player.currentCardDealt());
+				System.out.println("Your Hand Now Totals: " + player.getHandValue());
+				System.out.println();
+			}
+			if (selection.equalsIgnoreCase("S")) {
+				System.out.println("Your Hand Totals: " + player.getHandValue());
+				System.out.println();
+				stillPlaying = false;
 				dealer.dealerHitOrStay();
-			} else {
-				System.out
-						.println("Your Hand Totals " + player.getHandValue() + ". Do You Want to Hit or Stand? H or S");
-
-				String selection = input.nextLine();
-				if (selection.equalsIgnoreCase("H")) {
-					player.hitMe(dealer.dealCard());
-					System.out.println("You Were Dealt a: " + player.currentCardDealt());
-					System.out.println("Your Hand Now Totals: " + player.getHandValue());
-					System.out.println();
-				}
-				if (selection.equalsIgnoreCase("S")) {
-					System.out.println("Your Hand Totals: " + player.getHandValue());
-					System.out.println();
-					stillPlaying = false;
-					dealer.dealerHitOrStay();
-					scoreGame();
-				} else if (player.getHandValue() > 21) {
-					System.err.println("Bust! You Lose!");
-					playAgain();
-				}
+				scoreGame();
+			} else if (player.getHandValue() > 21) {
+				System.err.println("Bust! You Lose!");
+				playAgain();
 			}
 		}
 	}
@@ -112,7 +109,7 @@ public class BlackjackApp {
 		}
 	}
 
-	// Ask to Play Again (Loop?)
+	// Ask to Play Again
 	public void playAgain() {
 		player.discardHand();
 		dealer.discardHand();

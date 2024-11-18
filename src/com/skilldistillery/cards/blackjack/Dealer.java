@@ -2,7 +2,6 @@ package com.skilldistillery.cards.blackjack;
 
 import com.skilldistillery.cards.common.Card;
 import com.skilldistillery.cards.common.Deck;
-import com.skilldistillery.cards.blackjack.Player;
 
 public class Dealer extends Player {
 
@@ -27,17 +26,8 @@ public class Dealer extends Player {
 			System.out.println("The Dealer Hit & Drew a " + currentCardDealt());
 			System.out.println("The Dealer's Hand Now Totals " + getHandValue());
 			System.out.println();
-			}
-//		while (getHandValue() > 17 && player.getHandValue > 17) {
-//				hand.addCard(dealCard());
-//			}
 		}
-//		if (getHandValue() <= 21) {
-//			System.out.println("The Dealer Stands & Has " + toString());
-//			System.out.println("The Dealer's Hand Now Totals " + getHandValue());
-//			System.out.println();
-//		}
-	
+	}
 
 	// Shuffle the Deck
 	public void shuffleDeck() {
