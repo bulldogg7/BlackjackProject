@@ -96,17 +96,14 @@ public class BlackjackApp {
 		if (player.getHandValue() > dealer.getHandValue() && player.getHandValue() <= 21) {
 			System.out.println(
 					"You Win With " + player.getHandValue() + " vs the Dealer's " + dealer.getHandValue() + "!");
-			playAgain();
 		} else if (dealer.getHandValue() > player.getHandValue() && dealer.getHandValue() <= 21) {
 			System.out.println("Dealer Wins With " + dealer.getHandValue() + " vs Your " + player.getHandValue() + "!");
-			playAgain();
 		} else if (dealer.getHandValue() > 21) {
 			System.out.println("The Dealer Went Over 21 & Busted! You Win!");
-			playAgain();
 		} else if ((dealer.getHandValue() == player.getHandValue() && dealer.getHandValue() <= 21)) {
 			System.out.println("The Game Ends in a Tie!");
-			playAgain();
 		}
+		playAgain();
 	}
 
 	// Ask to Play Again

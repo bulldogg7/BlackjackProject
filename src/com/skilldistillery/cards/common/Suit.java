@@ -1,7 +1,7 @@
 package com.skilldistillery.cards.common;
 
 public enum Suit {
-	HEARTS("Hearts"), SPADES("Spades"), CLUBS("Clubs"), DIAMONDS("Diamonds");
+	HEARTS("Hearts \u2665"), SPADES("Spades \u2660"), CLUBS("Clubs \u2663"), DIAMONDS("Diamonds \u2666");
 
 	private final String name;
 

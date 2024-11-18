@@ -20,6 +20,8 @@
 	- Learned how to write & call several methods, which represented different actions
 	- Learned to have two entities (player & dealer) use the same player class
 	- Learned .equalsIgnoreCase & try/catch
+	- Learned that I don't know the rules of Blackjack - need to fix how the dealer's
+	  2nd card is supposed to be dealt face down
 
 ## Changes Made
 	- Refined User Experience with verbiage and formatting
